@@ -17,11 +17,17 @@ echo "Unzip instalado!"
 
 
 echo "Baixando zip do GitHub..."
+cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip 
 echo "Zip baixado!"
 
+echo "Descompactando arquivo..."
+unzip main.zip
+echo "Arquico descompactado!"
+
 echo "Copiando os arquivos para o Apache..."
-cp -R main.zip /var/www/html/
+cd linux-site-dio-main
+cp -R * /var/www/html/
 echo "Arquivos copiados!"
 
 
